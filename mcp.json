@@ -1,0 +1,50 @@
+{
+  "name": "browser-forest",
+  "version": "0.1.0",
+  "description": "Anti-detect cloud browser MCP — kernel-patched Chromium bypasses DataDome/PerimeterX/Cloudflare; AI behavior layer drives human-like clicks. Cloud browser API for AI agents.",
+  "endpoint": "https://browserforest.com/api/mcp/bf",
+  "protocol": "streamable-http",
+  "auth": {
+    "type": "header",
+    "headerName": "X-API-Key",
+    "description": "Your Browser Forest API key (starts with bf_live_). Generate one from the dashboard at https://browserforest.com/dashboard/keys"
+  },
+  "tools": [
+    {
+      "name": "bf_create_session",
+      "description": "Create an anti-detect browser session (optional url/proxy/contextId), returns CDP-ready session"
+    },
+    {
+      "name": "bf_navigate",
+      "description": "Navigate the browser to a URL and wait for load (domcontentloaded + network idle)"
+    },
+    {
+      "name": "bf_extract",
+      "description": "Extract page content by selector (markdown or structured)"
+    },
+    {
+      "name": "bf_screenshot",
+      "description": "Take a screenshot of the current page, returns base64 PNG"
+    },
+    {
+      "name": "bf_click",
+      "description": "Click an element with the AI behavior engine (isTrusted + human trajectory)"
+    },
+    {
+      "name": "bf_fill",
+      "description": "Fill a form field with the AI behavior engine (human-like typing)"
+    },
+    {
+      "name": "bf_scroll",
+      "description": "Scroll the page"
+    },
+    {
+      "name": "bf_snapshot",
+      "description": "Accessibility snapshot (AX tree + refs) for AI behavior engine input"
+    },
+    {
+      "name": "bf_close",
+      "description": "Close the browser session (release resources)"
+    }
+  ]
+}
